@@ -16,10 +16,7 @@ import org.junit.jupiter.api.BeforeAll;
 
 import org.junit.jupiter.api.*;
 
-/**
- * Unit test for simple App.
- */
-public class AppTest //extends TestCase
+public class MatriculaTest
 {
 	@BeforeAll
 	static public void beforeAll() {
@@ -30,23 +27,30 @@ public class AppTest //extends TestCase
 	static public void afterAll() {
 		System.out.println("Executed after all tests have been run");
 	}
-		
+	
+	/*PREGUNTA 7*/
+	@Test
+	public void is_null_vector2() throws NullVectorException{
+		Matricula m = new Matricula(null);
+		assertThrows(NullVectorException.class, () -> m.getImporte());
+	}
+	
+	/*PREGUNTA 8*/
+	@Test
+	public void myTestMethod() throws Exception{
+		  Matricula m = mock(Matricula.class);
+		  when(m.getImporte()).thenReturn(0.0);
+
+		  assertEquals(0.0, m.getImporte());
+	}
+    
+	/*
 	@Test
 	public void is_null_vector() throws NullVectorException{
-		//Vector<Asignatura> vectorAsignaturas= new Vector<Asignatura>();
+		//Vector<Asignatura> vec= new Vector<Asignatura>();
 		Matricula m = new Matricula(null);
 		assertEquals(0,m.vectorAsignaturas.size());
 	}
-	
-	/*
-	@Test
-	public void myTestMethod(){
-		  Matricula m = mock(Matricula.class);
-		  when(m.getImporte()).thenReturn(<value>);
-
-		  // THIS SHOULD BE TRUE
-		  assertEquals(<value>, c.<method>());
-	}
 	*/
-    
+	
 }
