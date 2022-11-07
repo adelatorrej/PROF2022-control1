@@ -1,9 +1,6 @@
+/*
 package com.examen1.prof;
 
-/**
- * Hello world!
- *
- */
 public class App 
 {
     public static void main( String[] args )
@@ -11,3 +8,4 @@ public class App
         System.out.println( "Hello World!" );
     }
 }
+*/
